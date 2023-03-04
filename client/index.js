@@ -36,10 +36,10 @@ async function loadJourneys(){
       <td>${values.Distance}</td> 
       <td>${values.Haul}</td>
       <td>${values.ExpectedPassengers}</td>  
-      <td>${values.Transcontinental}</td> 
+      <td>${values.Transcontinental}</td>  
       </tr>`;
     });
-    document.getElementById('tbody2').innerHTML = tableData;
+    document.getElementById('tbody1').innerHTML = tableData;
 
   };
 
@@ -61,7 +61,7 @@ async function loadPlanes(){
     <td><img src="./images/${values.Image}"</img></td> 
     </tr>`;
   })
-  document.getElementById('tbody1').innerHTML = tableData;
+  document.getElementById('tbody2').innerHTML = tableData;
 
 }
 

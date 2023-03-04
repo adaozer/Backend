@@ -7,7 +7,6 @@
         "Haul": "Short",
         "ExpectedPassengers": "170",
         "Transcontinental": "No"
-
     },
 
 
@@ -19,7 +18,6 @@
         "Haul": "Long",
         "ExpectedPassengers": "170",
         "Transcontinental": "Yes"
-
     },
 
     "Paris-Singapore": {
@@ -30,7 +28,6 @@
         "Haul": "Long",
         "ExpectedPassengers": "170",
         "Transcontinental": "Yes"
-
     },
 
         "Berlin-Tokyo": {
@@ -39,9 +36,9 @@
             "Destination": "Tokyo",
             "Distance": "8915 km",
             "Haul": "Long",
-            "ExpectedPassengers": "170",
+            "ExpectedPassengers": "170"  ,
             "Transcontinental": "Yes"
-    
+ 
         },
 
             "Amsterdam-Barcelona": {
@@ -50,9 +47,9 @@
                 "Destination": "Barcelona",
                 "Distance": "1239 km",
                 "Haul": "Short",
-                "ExpectedPassengers": "170",
+                "ExpectedPassengers": "170" ,
                 "Transcontinental": "No"
-        
+       
             }
 
 }

@@ -108,18 +108,27 @@
 
 #big {
     display: flex;
-}
-
-#box1{
-    margin-left: 3%;
-    margin-top: 5%;
-}
-
-#box2 {
-    margin-left: 30%;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 img {
     width: 100px;
+}
+
+.but {
+    border-radius: 12px;
+    background: white;
+    border-color: lightblue;
+    transition-duration: 0.4s;
+    border-width: 5px;
+    width: 150px;
+    height: 85px;
+    justify-content: space-around;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.but:hover {
+    background-color: lightblue;
+    color: white;
 }
