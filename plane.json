@@ -1,3 +1,50 @@
 {
-    
+   "Boeing 787-9 Dreamliner": {
+        "ID": "11",
+        "Maximum Range": "14140 KM",
+        "Maximum Speed": "954 KM",
+        "Passanger Capacity": "300", 
+        "Price": "500,000"
+   },
+
+   "Airbus A350-900": {
+        "ID": "12",
+        "Maximum Range": "15700 KM",
+        "Maximum Speed": "956 KM",
+        "Passanger Capacity": "300", 
+        "Price": "500,000"
+},
+
+    "Airbus A330-300": {
+        "ID": "13",
+        "Maximum Range": "11750 KM",
+        "Maximum Speed": "880 KM",
+        "Passanger Capacity": "300", 
+        "Price": "500,000"
+},
+
+    "Airbus A321neo": {
+        "ID": "14",
+        "Maximum Range": "7400 KM",
+        "Maximum Speed": "871 KM",
+        "Passanger Capacity": "300", 
+        "Price": "500,000"
+},
+
+    "Boeing 737-800": {
+        "ID": "15",
+        "Maximum Range": "5436 KM",
+        "Maximum Speed": "938 KM",
+        "Passanger Capacity": "300", 
+        "Price": "500,000"
+},
+
+    "Airbus A321-200": {
+        "ID": "16",
+        "Maximum Range": "5600 KM",
+        "Maximum Speed": "871 KM",
+        "Passanger Capacity": "300", 
+        "Price": "500,000"
+}
+
 }
