@@ -3,10 +3,10 @@
         "ID": "01",
         "Start": "London",
         "Destination": "Paris",
-        "Distance": "340 KM",
-        "Haul": "Short Haul",
-        "Expected Passangers": "170",
-        "Transconinental": "No"
+        "Distance": "340 km",
+        "Haul": "Short",
+        "ExpectedPassengers": "170",
+        "Transcontinental": "No"
 
     },
 
@@ -15,10 +15,10 @@
         "ID": "02",
         "Start": "London",
         "Destination": "New York",
-        "Distance": "5586 KM",
+        "Distance": "5586 km",
         "Haul": "Long",
-        "Expected Passangers": "170",
-        "Transconinental": "Yes"
+        "ExpectedPassengers": "170",
+        "Transcontinental": "Yes"
 
     },
 
@@ -26,10 +26,10 @@
         "ID": "03",
         "Start": "Paris",
         "Destination": "Singapore",
-        "Distance": "10737 KM",
+        "Distance": "10737 km",
         "Haul": "Long",
-        "Expected Passangers": "170",
-        "Transconinental": "Yes"
+        "ExpectedPassengers": "170",
+        "Transcontinental": "Yes"
 
     },
 
@@ -37,10 +37,10 @@
             "ID": "04",
             "Start": "Berlin",
             "Destination": "Tokyo",
-            "Distance": "8915 KM",
+            "Distance": "8915 km",
             "Haul": "Long",
-            "Expected Passangers": "170",
-            "Transconinental": "Yes"
+            "ExpectedPassengers": "170",
+            "Transcontinental": "Yes"
     
         },
 
@@ -48,10 +48,10 @@
                 "ID": "05",
                 "Start": "Amsterdam",
                 "Destination": "Barcelona",
-                "Distance": "1239 KM",
+                "Distance": "1239 km",
                 "Haul": "Short",
-                "Expected Passangers": "170",
-                "Transconinental": "No"
+                "ExpectedPassengers": "170",
+                "Transcontinental": "No"
         
             }
 

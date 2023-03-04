@@ -1,50 +1,62 @@
 {
    "Boeing 787-9 Dreamliner": {
+        "name": "Boeing 787-9 Dreamliner",
         "ID": "11",
-        "Maximum Range": "14140 KM",
-        "Maximum Speed": "954 KM",
-        "Passanger Capacity": "300", 
-        "Price": "500,000"
+        "Image": "11.jpg",
+        "MaximumRange": "14140 KM",
+        "MaximumSpeed": "954 KM",
+        "PassengerCapacity": "296", 
+        "Price": "200"
    },
 
    "Airbus A350-900": {
+        "name": "Airbus A359-900",
         "ID": "12",
-        "Maximum Range": "15700 KM",
-        "Maximum Speed": "956 KM",
-        "Passanger Capacity": "300", 
-        "Price": "500,000"
+        "Image": "12.jpg",
+        "MaximumRange": "15700 KM",
+        "MaximumSpeed": "956 KM",
+        "PassengerCapacity": "300", 
+        "Price": "300"
 },
 
     "Airbus A330-300": {
+        "name": "Airbus A330-300",
         "ID": "13",
-        "Maximum Range": "11750 KM",
-        "Maximum Speed": "880 KM",
-        "Passanger Capacity": "300", 
-        "Price": "500,000"
+        "Image": "13.jpg",
+        "MaximumRange": "11750 KM",
+        "MaximumSpeed": "880 KM",
+        "PassengerCapacity": "250", 
+        "Price": "256"
 },
 
     "Airbus A321neo": {
+        "name": "Airbus A321neo",
         "ID": "14",
-        "Maximum Range": "7400 KM",
-        "Maximum Speed": "871 KM",
-        "Passanger Capacity": "300", 
-        "Price": "500,000"
+        "Image": "14.jpg",
+        "MaximumRange": "7400 KM",
+        "MaximumSpeed": "871 KM",
+        "PassengerCapacity": "180", 
+        "Price": "130"
 },
 
     "Boeing 737-800": {
+        "name": "Boeing 737-800",
         "ID": "15",
-        "Maximum Range": "5436 KM",
-        "Maximum Speed": "938 KM",
-        "Passanger Capacity": "300", 
-        "Price": "500,000"
+        "Image": "15.jpg",
+        "MaximumRange": "5436 KM",
+        "MaximumSpeed": "938 KM",
+        "PassengerCapacity": "162", 
+        "Price": "106"
 },
 
     "Airbus A321-200": {
+        "name": "Airbus A321-200",
         "ID": "16",
-        "Maximum Range": "5600 KM",
-        "Maximum Speed": "871 KM",
-        "Passanger Capacity": "300", 
-        "Price": "500,000"
+        "Image": "16.jpg",
+        "MaximumRange": "5600 KM",
+        "MaximumSpeed": "871 KM",
+        "PassengerCapacity": "220", 
+        "Price": "115"
 }
 
 }

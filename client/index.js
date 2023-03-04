@@ -24,6 +24,45 @@ const navSlide = function () {
   
   navSlide();
 
-async function loadPlanes(data){
-    
+async function loadJourneys(){
+    const dataFetch = await fetch('http://127.0.0.1:8080/journeys');
+    const fetchResponseTxt = await dataFetch.text();
+    const journeysJSON = JSON.parse(fetchResponseTxt);
+    let tableData = '';
+    journeysJSON.map((values) => {
+      tableData += `<tr>
+      <td>${values.Start}</td>
+      <td>${values.Destination}</td> 
+      <td>${values.Distance}</td> 
+      <td>${values.Haul}</td>
+      <td>${values.ExpectedPassengers}</td>  
+      <td>${values.Transcontinental}</td> 
+      </tr>`;
+    });
+    document.getElementById('tbody2').innerHTML = tableData;
+
+  };
+
+loadJourneys();
+
+async function loadPlanes(){
+  const dataFetch = await fetch('http://127.0.0.1:8080/planes');
+  const fetchResponseTxt = await dataFetch.text();
+  const planesJSON = JSON.parse(fetchResponseTxt);
+  let tableData = '';
+
+  planesJSON.map((values) => {
+    tableData += `<tr>
+    <td>${values.name}</td>
+    <td>${values.MaximumRange}</td> 
+    <td>${values.MaximumSpeed}</td> 
+    <td>${values.PassengerCapacity}</td>
+    <td>${values.Price}</td>  
+    <td><img src="./images/${values.Image}"</img></td> 
+    </tr>`;
+  })
+  document.getElementById('tbody1').innerHTML = tableData;
+
 }
+
+loadPlanes();
