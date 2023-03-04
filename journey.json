@@ -1,0 +1,54 @@
+{
+    "London-Paris": {
+        "Start": "London",
+        "Destination": "Paris",
+        "Distance": "340 KM",
+        "Haul": "Short Haul",
+        "Expected Passangers": "170",
+        "Transconinental": "No"
+
+    },
+
+
+    "London-New York": {
+        "Start": "London",
+        "Destination": "New York",
+        "Distance": "5586 KM",
+        "Haul": "Long",
+        "Expected Passangers": "170",
+        "Transconinental": "Yes"
+
+    },
+
+    "Paris-Singapore": {
+        "Start": "Paris",
+        "Destination": "Singapore",
+        "Distance": "10737 KM",
+        "Haul": "Long",
+        "Expected Passangers": "170",
+        "Transconinental": "Yes"
+
+    },
+
+        "Berlin-Tokyo": {
+            "Start": "Berlin",
+            "Destination": "Tokyo",
+            "Distance": "8915 KM",
+            "Haul": "Long",
+            "Expected Passangers": "170",
+            "Transconinental": "Yes"
+    
+        },
+
+            "Amsterdam-Barcelona": {
+                "Start": "Amsterdam",
+                "Destination": "Barcelona",
+                "Distance": "1239 KM",
+                "Haul": "Short",
+                "Expected Passangers": "170",
+                "Transconinental": "No"
+        
+            }
+
+}
+

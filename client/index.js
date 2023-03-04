@@ -23,3 +23,7 @@ const navSlide = function () {
   };
   
   navSlide();
+
+async function loadPlanes(data){
+    
+}
