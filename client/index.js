@@ -30,7 +30,7 @@ async function loadJourneys () {
   const journeysJSON = JSON.parse(fetchResponseTxt);
   let dropdownData = '';
   journeysJSON.map((values) => {
-    dropdownData += `<a class="dropdown-item" href="#">${values}</a>`;
+    dropdownData += `<a class="dropdown-item" href="#" onclick="showJourney('${values}')">${values}</a>`;
   });
 
   document.getElementById('selam').innerHTML = dropdownData;
@@ -52,9 +52,12 @@ const tableData = `<tr><td>${selectionJSON.Start}</td>
 document.getElementById('tbody1').innerHTML = tableData;
 }
 
-showJourney('London-Paris');
+// async function addJourneys() {
+
+// }
 
 loadJourneys();
+showJourney('London-Paris');
 
 async function loadPlanes () {
 const dataFetch = await fetch('http://127.0.0.1:8080/planes');
