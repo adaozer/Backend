@@ -40,7 +40,6 @@ async function showJourney (journey) {
 const selection = await fetch(`http://127.0.0.1:8080/journeys/${journey}`);
 const selectionText = await selection.text();
 const selectionJSON = JSON.parse(selectionText);
-console.log(selectionJSON)
 const tableData = `<tr><td>${selectionJSON.Start}</td>
 <td>${selectionJSON.Destination}</td> 
 <td>${selectionJSON.Distance}</td> 
