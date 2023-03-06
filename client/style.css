@@ -1,30 +1,42 @@
 #nav {
     display: flex;
-    justify-content: space-around;
+    text-align: left;
     align-items: center;
-    background-color: pink;
+    background-color: rgb(58, 143, 253);
     min-height: 8vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    z-index: 5;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav_links li:hover {
+    text-decoration: underline;
+    color: white;
 }
 
 .logo{
-    color: rgb(250, 71, 71);
+    text-align: left;
+    color: white;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
     font-size: 1.2rem;
+    margin-left: 5%;
 }
 
 .nav_links{
     display: flex;
     justify-content: space-around;
+    text-align: left;
     width: 30%;
+    margin-top: 0.6%;
 }
 
 .nav_links a{
     text-decoration: none;
     letter-spacing: 0.2rem;
-    color: rgb(250, 71, 71);
+    color: white;
     font-weight: bold;
     font-size: 1.1rem;
 }
@@ -40,7 +52,7 @@
 .burger div{
     width: 1.5rem;
     height: 0.2rem;
-    background-color: rgb(250, 71, 71);
+    background-color: white;
     margin: 0.3rem;
     transition: all 0.3s ease;
 
@@ -61,7 +73,7 @@
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: pink;
+        background-color: rgb(58, 143, 253);
         flex-direction: column;
         align-items: center;
         width: 50%;
@@ -108,10 +120,10 @@
 
 #big {
     display: flex;
-    margin-top: 2%;
+    margin-top: 12vh;
 }
 
-img {
+.img {
     width: 100px;
 }
 
@@ -135,8 +147,29 @@ img {
 
 #dropdownMenuButton {
     width: 100%;
+    background-color: rgb(102, 158, 233) !important;
+    color: white;
+    z-index: 2 !important;
 }
 
 .dropdown-menu {
     width: 100%;
 }
+
+#journey-name {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 1%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+#thead1 {
+    background-color: rgb(102, 158, 233) !important;
+    font-size: 13px !important;
+}
+
+#tbody1 {
+    font-size: 13px !important;
+}
+
