@@ -52,9 +52,9 @@ document.getElementById('tbody1').innerHTML = tableData;
 document.getElementById('journey-name').innerHTML = journey;
 }
 
-async function addJourneys() {
+// async function addJourneys() {
 
-}
+// };
 
 loadJourneys();
 showJourney('London-Paris');
@@ -80,8 +80,9 @@ document.getElementById('tbody2').innerHTML = tableData;
 
 loadPlanes();
 
-async function planeData(plane) {
+async function planeData (plane) {
   const planeFetch = await fetch(`http://127.0.0.1:8080/planes/${plane}`);
   const planeFetchText = await planeFetch.text();
   const planeData = JSON.parse(planeFetchText);
+
 }
