@@ -98,9 +98,31 @@ async function addJourney () {
       loadJourneys();
       form.reset();
   });
-  }
+  };
 
-  document.addEventListener('DOMContentLoaded', loadJourneys);
-  document.addEventListener('DOMContentLoaded', addJourney);
-  document.addEventListener('DOMContentLoaded', loadPlanes);
-  document.addEventListener('DOMContentLoaded', showJourney('London-Paris'));
+async function addPlane () {
+  const form = document.getElementById('form-plane');
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData);
+
+    await fetch('http://127.0.0.1:8080/planes/new',
+    {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+
+    loadPlanes();
+    form.reset();
+  });
+};
+
+document.addEventListener('DOMContentLoaded', loadJourneys);
+document.addEventListener('DOMContentLoaded', addJourney);
+document.addEventListener('DOMContentLoaded', loadPlanes);
+document.addEventListener('DOMContentLoaded', addPlane);
+document.addEventListener('DOMContentLoaded', showJourney('London-Paris'));

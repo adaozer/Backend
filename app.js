@@ -58,4 +58,25 @@ app.get('/planes', function (req, resp) {
     resp.send(journeys);
 });
 
+app.post('/planes/new', function (req, resp) {
+    const key = req.body.name;
+    const img = req.body.image;
+    const range = req.body.range + 'km';
+    const speed = req.body.speed + 'km/h';
+    const passenger = req.body.passenger;
+    const price = '$' + req.body.price + 'M';
+
+    planes[key] = {
+        name: key,
+        Image: img,
+        MaximumRange: range,
+        MaximumSpeed: speed,
+        PassengerCapacity: passenger,
+        Price: price
+    };
+
+    fs.writeFileSync(planeJSON, JSON.stringify(planes));
+    resp.send(planes);
+});
+
 module.exports = app;

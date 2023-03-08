@@ -6,7 +6,7 @@
         "MaximumRange": "14140 km",
         "MaximumSpeed": "954 km/h",
         "PassengerCapacity": "296", 
-        "Price": "200"
+        "Price": "$200 M"
    },
 
    "Airbus A350-900": {
@@ -16,7 +16,7 @@
         "MaximumRange": "15700 km",
         "MaximumSpeed": "956 km/h",
         "PassengerCapacity": "300", 
-        "Price": "300"
+        "Price": "$300 M"
 },
 
     "Airbus A330-300": {
@@ -26,7 +26,7 @@
         "MaximumRange": "11750 km",
         "MaximumSpeed": "880 km/h",
         "PassengerCapacity": "250", 
-        "Price": "256"
+        "Price": "$256 M"
 },
 
     "Airbus A321neo": {
@@ -36,7 +36,7 @@
         "MaximumRange": "7400 km",
         "MaximumSpeed": "871 km/h",
         "PassengerCapacity": "180", 
-        "Price": "130"
+        "Price": "$130 M"
 },
 
     "Boeing 737-800": {
@@ -46,7 +46,7 @@
         "MaximumRange": "5436 km",
         "MaximumSpeed": "938 km/h",
         "PassengerCapacity": "162", 
-        "Price": "106"
+        "Price": "$106 M"
 },
 
     "Airbus A321-200": {
@@ -56,7 +56,7 @@
         "MaximumRange": "5600 km",
         "MaximumSpeed": "871 km/h",
         "PassengerCapacity": "220", 
-        "Price": "115"
+        "Price": "$115 M"
 }
 
 }

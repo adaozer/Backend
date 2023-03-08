@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>PLANE SALESMAN</title>
+    <title>Home</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
-<body>
+<body id="index">
     
     <div id="nav">
         <div class ="logo">
@@ -28,8 +28,8 @@
     <div id="big"> 
         <div class="container"> 
           <div class="dropdown">
-            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Journey Selection
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Route Selection
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="selam"> 
               <a class="dropdown-item" href="#">Action</a>
@@ -63,30 +63,33 @@
             </tbody>
           </table>
 
-          <h1>Add Journey</h1>
+          <h1 class="add-form">Add Route</h1>
           <form id="form-journey">
-            <input name="start">
-           <input name="destination">
-            <input name="distance">
-            <input name="haul">
-            <input name="passengers">
-            <input name="transcontinental">
-
-            <input type='submit'>
-
-          <!-- <input name="start" class="form-control" type="text" placeholder="Default input">
-          <input name="destination" class="form-control" type="text" placeholder="Default input">
-
-          <input name="distance" class="form-control" type="text" placeholder="Default input">
+           
+            <p class="formp">Starting Location</p>
+          <input name="start" class="form-control" type="text" placeholder="Enter starting location">
+          <p class="formp">Destination</p>
+          <input name="destination" class="form-control" type="text" placeholder="Enter destination">
+<p class="formp">Distance (km)</p>
+          <input name="distance" class="form-control" type="text" placeholder="Enter distance (km)">
+          <p class="formp">Haul</p>
           <select name="haul" class="form-control">
-            <option>Default select</option>
+            <option value="" disabled selected>Select Haul</option>
+            <option>Long</option>
+            <option>Medium</option>
+            <option>Short</option>
           </select>    
-          <input name="passengers" class="form-control" type="text" placeholder="Default input">
- 
+          <p class="formp">Expected Passenger Amount</p>
+          <input name="passengers" class="form-control" type="text" placeholder="Enter expected passengers">
+ <p class="formp">Transcontinental</p>
           <select name="transcontinental" class="form-control">
-            <option>Default select</option>
+            <option value="" disabled selected>Indicate if Transcontinental</option>
+            <option>Yes</option>
+            <option>No</option>
+         
+
           </select>   
-          <button type="submit" class="btn btn-primary">Submit</button> -->
+          <button id="submit2" type="submit" class="btn btn-primary">Submit</button>
         </form>
         </div>
 
@@ -94,11 +97,11 @@
           <table class="table table-striped" id="table2">
             <thead class="table" id="thead2">
               <tr>
-                <th scope="col">Name</th>
+                <th scope="col">Model</th>
                 <th scope="col">Maximum Range</th>
                 <th scope="col">Maximum Speed</th>
                 <th scope="col">Passenger Capacity</th>
-                <th scope="col">Price (in Millions)</th>
+                <th scope="col">Price</th>
                 <th scope="col">Image</th>
                 <th scope="col"></th>
 
