@@ -52,13 +52,6 @@ document.getElementById('tbody1').innerHTML = tableData;
 document.getElementById('journey-name').innerHTML = journey;
 }
 
-// async function addJourneys() {
-
-// };
-
-loadJourneys();
-showJourney('London-Paris');
-
 async function loadPlanes () {
 const dataFetch = await fetch('http://127.0.0.1:8080/planes');
 const fetchResponseTxt = await dataFetch.text();
@@ -72,17 +65,42 @@ planesJSON.map((values) => {
   <td>${values.MaximumSpeed}</td> 
   <td>${values.PassengerCapacity}</td>
   <td>${values.Price}</td>  
-  <td><img src="./images/${values.Image} class="img"</img></td> 
+  <td><img src="./images/${values.Image}" class="img"</img></td> 
   </tr>`;
 });
 document.getElementById('tbody2').innerHTML = tableData;
 }
 
-loadPlanes();
+// async function planeData (plane) {
+//  const planeFetch = await fetch(`http://127.0.0.1:8080/planes/${plane}`);
+// const planeFetchText = await planeFetch.text();
+//  const planeData = JSON.parse(planeFetchText);
+//  let getInfo = '';
+//  document.getElementById('show-info').innerHTML = getInfo;
+// }
 
-async function planeData (plane) {
-  const planeFetch = await fetch(`http://127.0.0.1:8080/planes/${plane}`);
-  const planeFetchText = await planeFetch.text();
-  const planeData = JSON.parse(planeFetchText);
+async function addJourney () {
+  const form = document.getElementById('form-journey');
+  form.addEventListener('submit', async function (event) {
+      event.preventDefault();
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
 
-}
+      await fetch('http://127.0.0.1:8080/journeys/new',
+      {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+            },
+          body: JSON.stringify(data)
+      });
+
+      loadJourneys();
+      form.reset();
+  });
+  }
+
+  document.addEventListener('DOMContentLoaded', loadJourneys);
+  document.addEventListener('DOMContentLoaded', addJourney);
+  document.addEventListener('DOMContentLoaded', loadPlanes);
+  document.addEventListener('DOMContentLoaded', showJourney('London-Paris'));

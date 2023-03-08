@@ -30,28 +30,32 @@ app.get('/planes', function (req, resp) {
     resp.send(planeValues);
 });
 
-app.get('/planes/:info', function (req, resp) {
-    const plane = req.params.info;
-    const send = plane;
-    resp.send(send);
- });
+// app.get('/planes/:plane', function (req, resp) {
+//    const plane = req.params.plane;
+//    const info = planes[info];
+//    resp.send(info);
+// });
 
-app.post('/journeys/new', function (req, resp) {
-    const start = req.params.start;
-    const destination = req.params.destination;
-    const distance = req.params.distance;
-    const haul = req.params.haul;
-    const passengers = req.params.passengers;
-    const transcontinental = req.params.transcontinental;
+ app.post('/journeys/new', function (req, resp) {
+    const start = req.body.start;
+    const destination = req.body.destination;
+    const distance = req.body.distance;
+    const haul = req.body.haul;
+    const passengers = req.body.passengers;
+    const transcontinental = req.body.transcontinental;
     const key = start + '-' + destination;
-    journeys[key].start = start;
-    journeys[key].destination = destination;
-    journeys[key].distance = distance;
-    journeys[key].haul = haul;
-    journeys[key].passengers = passengers;
-    journeys[key].transcontinental = transcontinental;
+
+    journeys[key] = {
+        Start: start,
+        Destination: destination,
+        Distance: distance,
+        Haul: haul,
+        ExpectedPassengers: passengers,
+        Transcontinental: transcontinental
+    };
+
     fs.writeFileSync(journeyJSON, JSON.stringify(journeys));
     resp.send(journeys);
- });
+});
 
 module.exports = app;
