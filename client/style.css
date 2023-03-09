@@ -118,7 +118,11 @@
     transform: rotate(45deg) translate(-5px,-6px);
 }
 
-#big {
+.big2 {
+    display: flex;
+}
+
+.big {
     display: flex;
     margin-top: 12vh;
 }
@@ -128,20 +132,20 @@
 }
 
 #dropdownMenuButton {
-    width: 70%;
+    width: 100%;
     background-color: rgb(102, 158, 233) !important;
     color: white;
     z-index: 2 !important;
 }
 
 .dropdown-menu {
-    width: 70%;
+    width: 100%;
 }
 
 #journey-name {
     text-align: left;
     font-size: 16px;
-    margin-top: 1%;
+    margin-top: 2%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
@@ -160,7 +164,7 @@
 }
 
 .add-form {
-    margin-top: 5% !important;
+    margin-top: 3% !important;
     font-size: 20px;
     color: rgb(58, 143, 253);
     text-shadow: -1px -1px 0 rgb(43, 105, 187), 1px -1px 0 rgb(43, 105, 187), -1px 1px 0 rgb(43, 105, 187), 1px 1px 0 rgb(43, 105, 187);
@@ -171,8 +175,23 @@
     margin-top: 1.5%;
 }
 
+#admin-text {
+    margin-top: 12vh !important;
+}
+
+@media screen and (max-width: 700px) {
+    #submit {
+        margin-top: 3%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #submit {
+        margin-top: 5%;
+    }
+}
 #submit2 {
-    margin-top: 1.5%;
+    margin-top: 2%;
 }
 
 .formp {
@@ -181,13 +200,203 @@
 }
 
 .form-control {
-    width: 70% !important;
+    width: 100% !important;
 }
 
 #table1 {
-    width: 70%;
+    width: 100%;
 }
 
 .container {
     margin-left: 1% !important;
 }
+
+#dropdown1 {
+    cursor: pointer;
+}
+
+#dropdown2 {
+    cursor: pointer;
+}
+
+.box {
+    width: auto;
+    min-height: 150px;
+    border: 5px  solid rgb(58, 143, 253);
+    padding: 20px;
+    height: auto;
+    margin-bottom: 3%;
+}
+
+@media screen and (max-width: 1200px) {
+    .big {
+        display: block;
+    }
+
+    #table2 {
+        margin-top: 3% !important;
+    }
+}
+
+#table2 {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+#table2 caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  #table2 tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  #table2 th,
+  #table2 td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  #table2 th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 990px) {
+    #table2 {
+      border: 0;
+      margin-top: 5%;
+    }
+  
+    #table2 caption {
+      font-size: 1.3em;
+    }
+    
+    #table2 thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    #table2 tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    #table2 td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    #table2 td::before {
+     
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    #table2 td:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  #table1 {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  #table1 caption {
+      font-size: 1.5em;
+      margin: .5em 0 .75em;
+    }
+    
+    #table1 tr {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      padding: .35em;
+    }
+    
+    #table1 th,
+    #table1 td {
+      padding: .625em;
+      text-align: center;
+    }
+    
+    #table1 th {
+      font-size: .85em;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    
+    @media screen and (max-width: 990px) {
+      #table1 {
+        border: 0;
+        margin-top: 3%;
+      }
+    
+      #table1 caption {
+        font-size: 1.3em;
+      }
+      
+      #table1 thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+      
+      #table1 tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+      }
+      
+      #table1 td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+      }
+      
+      #table1 td::before {
+       
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      
+      #table1 td:last-child {
+        border-bottom: 0;
+      }
+    }
+  
+  .para {
+    font-size: 20px;
+  }
+

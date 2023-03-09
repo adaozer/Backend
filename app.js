@@ -30,11 +30,11 @@ app.get('/planes', function (req, resp) {
     resp.send(planeValues);
 });
 
-// app.get('/planes/:plane', function (req, resp) {
-//    const plane = req.params.plane;
-//    const info = planes[info];
-//    resp.send(info);
-// });
+ app.get('/planes/:plane', function (req, resp) {
+    const plane = req.params.plane;
+    const info = planes[plane].Info;
+    resp.send(info);
+ });
 
  app.post('/journeys/new', function (req, resp) {
     const start = req.body.start;
@@ -59,15 +59,16 @@ app.get('/planes', function (req, resp) {
 });
 
 app.post('/planes/new', function (req, resp) {
-    const key = req.body.name;
+    const name1 = req.body.name;
     const img = req.body.image;
-    const range = req.body.range + 'km';
-    const speed = req.body.speed + 'km/h';
+    const range = req.body.range + ' km';
+    const speed = req.body.speed + ' km/h';
     const passenger = req.body.passenger;
-    const price = '$' + req.body.price + 'M';
+    const price = '$' + req.body.price + ' M';
+    const key = name1.replace(/\s+/g, '');
 
     planes[key] = {
-        name: key,
+        name: name1,
         Image: img,
         MaximumRange: range,
         MaximumSpeed: speed,

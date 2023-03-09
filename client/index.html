@@ -25,10 +25,10 @@
             <div class="line3"></div>
         </div>
     </div>
-    <div id="big"> 
+    <div class="big"> 
         <div class="container"> 
           <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Route Selection
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="selam"> 
@@ -39,7 +39,7 @@
           </div>
 
           <h1 id="journey-name"></h1>
-          <table class="table table-striped" id="table1">
+          <table class="table" id="table1">
             <thead class="table" id="thead1">
               <tr>
                 <th scope="col">Start</th>
@@ -73,7 +73,7 @@
 <p class="formp">Distance (km)</p>
           <input name="distance" class="form-control" type="text" placeholder="Enter distance (km)">
           <p class="formp">Haul</p>
-          <select name="haul" class="form-control">
+          <select id="dropdown1" name="haul" class="form-control">
             <option value="" disabled selected>Select Haul</option>
             <option>Long</option>
             <option>Medium</option>
@@ -82,7 +82,7 @@
           <p class="formp">Expected Passenger Amount</p>
           <input name="passengers" class="form-control" type="text" placeholder="Enter expected passengers">
  <p class="formp">Transcontinental</p>
-          <select name="transcontinental" class="form-control">
+          <select id="dropdown2" name="transcontinental" class="form-control">
             <option value="" disabled selected>Indicate if Transcontinental</option>
             <option>Yes</option>
             <option>No</option>
@@ -94,7 +94,7 @@
         </div>
 
         <div class="container">
-          <table class="table table-striped" id="table2">
+          <table class="table" id="table2">
             <thead class="table" id="thead2">
               <tr>
                 <th scope="col">Model</th>
@@ -103,8 +103,7 @@
                 <th scope="col">Passenger Capacity</th>
                 <th scope="col">Price</th>
                 <th scope="col">Image</th>
-                <th scope="col"></th>
-
+                <th scope="col">Extra Information</th>
               </tr>
             </thead>
             <tbody id="tbody2">
@@ -119,7 +118,10 @@
               </tr>
             </tbody>
           </table>
-    
+          <h2 class="add-form" id="box-heading">Extra Information Display</h2>
+    <div class="box">
+
+    </div>
     </div> 
             
     </div>

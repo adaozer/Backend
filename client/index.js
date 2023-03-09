@@ -40,12 +40,12 @@ async function showJourney (journey) {
 const selection = await fetch(`http://127.0.0.1:8080/journeys/${journey}`);
 const selectionText = await selection.text();
 const selectionJSON = JSON.parse(selectionText);
-const tableData = `<tr><td>${selectionJSON.Start}</td>
-<td>${selectionJSON.Destination}</td> 
-<td>${selectionJSON.Distance}</td> 
-<td>${selectionJSON.Haul}</td>
-<td>${selectionJSON.ExpectedPassengers}</td>  
-<td>${selectionJSON.Transcontinental}</td> 
+const tableData = `<tr><td data-label="Start">${selectionJSON.Start}</td>
+<td data-label="Destination">${selectionJSON.Destination}</td> 
+<td data-label="Distance">${selectionJSON.Distance}</td> 
+<td data-label="Haul">${selectionJSON.Haul}</td>
+<td data-label="Expected Passengers">${selectionJSON.ExpectedPassengers}</td>  
+<td data-label="Transcontinental">${selectionJSON.Transcontinental}</td> 
 </tr>`;
 
 document.getElementById('tbody1').innerHTML = tableData;
@@ -60,24 +60,28 @@ let tableData = '';
 
 planesJSON.map((values) => {
   tableData += `<tr>
-  <td>${values.name}</td>
-  <td>${values.MaximumRange}</td> 
-  <td>${values.MaximumSpeed}</td> 
-  <td>${values.PassengerCapacity}</td>
-  <td>${values.Price}</td>  
-  <td><img src="./images/${values.Image}" class="img"</img></td> 
+  <td data-label="Model">${values.name}</td>
+  <td data-label="Maximum Range">${values.MaximumRange}</td> 
+  <td data-label="Maximum Speed">${values.MaximumSpeed}</td> 
+  <td data-label="Passenger Capacity">${values.PassengerCapacity}</td>
+  <td data-label="Price">${values.Price}</td>  
+  <td data-label="Image"><img src="./images/${values.Image}" class="img"</img></td>
+  <td data-label="Show Info"><button class="btn btn-primary" onclick="planeData('${values.name.replace(/\s+/g, '')}')">Show Info</button></td>
   </tr>`;
 });
 document.getElementById('tbody2').innerHTML = tableData;
 }
 
-// async function planeData (plane) {
-//  const planeFetch = await fetch(`http://127.0.0.1:8080/planes/${plane}`);
-// const planeFetchText = await planeFetch.text();
-//  const planeData = JSON.parse(planeFetchText);
-//  let getInfo = '';
-//  document.getElementById('show-info').innerHTML = getInfo;
-// }
+ async function planeData (plane) {
+  const box = document.querySelector('.box');
+  const planeFetch = await fetch(`http://127.0.0.1:8080/planes/${plane}`);
+  const planeFetchText = await planeFetch.text();
+  if (box.innerHTML === `<p class="para">${planeFetchText}</p>`) {
+    box.innerHTML = '';
+  } else {
+  box.innerHTML = `<p class="para">${planeFetchText}</p>`;
+  };
+};
 
 async function addJourney () {
   const form = document.getElementById('form-journey');
@@ -100,29 +104,7 @@ async function addJourney () {
   });
   };
 
-async function addPlane () {
-  const form = document.getElementById('form-plane');
-  form.addEventListener('submit', async function (event) {
-    event.preventDefault();
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
-
-    await fetch('http://127.0.0.1:8080/planes/new',
-    {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    });
-
-    loadPlanes();
-    form.reset();
-  });
-};
-
 document.addEventListener('DOMContentLoaded', loadJourneys);
 document.addEventListener('DOMContentLoaded', addJourney);
 document.addEventListener('DOMContentLoaded', loadPlanes);
-document.addEventListener('DOMContentLoaded', addPlane);
 document.addEventListener('DOMContentLoaded', showJourney('London-Paris'));
