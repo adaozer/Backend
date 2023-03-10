@@ -12,45 +12,46 @@ HTML and CSS:
 
 (In the client folder)
 
-index.html
+- index.html
 
-admin.html
+- admin.html
 
-style.css
+- style.css
 
-image folder with images in it
+- image folder with images in it
 
-Server Side JS:
+Client Side JS:
 
 (In the client folder)
 
-index.js
+- index.js
 
-admin.js
+- admin.js
 
 Server Side JS:
-app.js
 
-server.js
+- app.js
 
-app.test.js
+- server.js
+
+- app.test.js
 
 
 Other:
 
-plane.json
+- plane.json
 
-journey.json
+- journey.json
 
-package.json
+- package.json
 
-.eslintrc.js
+- .eslintrc.js
 
-package-lock.json
+- package-lock.json
 
-README.md
+- README.md
 
-node_modules folder
+- node_modules folder
 
 ----------------------------------------------------------------------------------
 
