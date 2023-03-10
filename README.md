@@ -4,6 +4,8 @@ Introduction:
 
 This is a website made for helping airline companies buy planes for new routes they're planning to open. Users can specify the route they're planning on opening and get suggestions on which plane to buy. 
 
+----------------------------------------------------------------------------------
+
 Files Included:
 
 HTML and CSS:
@@ -35,6 +37,7 @@ package-lock.json
 README.md
 node_modules folder
 
+----------------------------------------------------------------------------------
 
 How to Execute Code:
 
@@ -45,12 +48,15 @@ Frameworks Used:
 Bootstrap (Mark Otto, J.T. (2010) Bootstrap, Bootstrap · The most popular HTML, CSS, and JS library in the world. Available at: https://getbootstrap.com/ (Accessed: March 10, 2023).)
 Express (Node.js web application framework (2010) Express. Available at: https://expressjs.com/ (Accessed: March 10, 2023). )
 
+----------------------------------------------------------------------------------
 
 API Documentation:
 
-## Coming Soon
+Coming Soon
 
-Refernces:
+----------------------------------------------------------------------------------
+
+References:
 
 
 CSS box model (2023) W3 Schools. Available at: https://www.w3schools.com/css/css_boxmodel.asp (Accessed: March 10, 2023). 
