@@ -400,3 +400,8 @@
     font-size: 20px;
   }
 
+  @media screen and (max-width: 560px) {
+    .para {
+      font-size: 15px;
+    }
+  }

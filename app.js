@@ -65,6 +65,7 @@ app.post('/planes/new', function (req, resp) {
     const speed = req.body.speed + ' km/h';
     const passenger = req.body.passenger;
     const price = '$' + req.body.price + ' M';
+    const info = req.body.info;
     const key = name1.replace(/\s+/g, '');
 
     planes[key] = {
@@ -73,7 +74,8 @@ app.post('/planes/new', function (req, resp) {
         MaximumRange: range,
         MaximumSpeed: speed,
         PassengerCapacity: passenger,
-        Price: price
+        Price: price,
+        Info: info
     };
 
     fs.writeFileSync(planeJSON, JSON.stringify(planes));
