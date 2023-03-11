@@ -13,6 +13,7 @@ async function planeList () {
 async function addPlane () {
     const form = document.getElementById('form-plane');
     form.addEventListener('submit', async function (event) {
+      try {
       event.preventDefault();
       const formData = new FormData(form);
       const data = Object.fromEntries(formData);
@@ -25,6 +26,9 @@ async function addPlane () {
           },
           body: JSON.stringify(data)
       });
+    } catch (err) {
+      alert(`The website has disconnected, ${err}`);
+    };
       planeList();
       form.reset();
     });

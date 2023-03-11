@@ -59,6 +59,8 @@ How to Execute Code:
 
 All files should be put in the same directory. Then npm install and npm start must be ran using a terminal that is in the right directory. Then, http://127.0.0.1:8080/ must be accessed on a browser such as Chrome.
 
+----------------------------------------------------------------------------------
+
 Frameworks Used:
 
 - Bootstrap (Mark Otto, J.T. (2010) Bootstrap, Bootstrap · The most popular HTML, CSS, and JS library in the world. Available at: https://getbootstrap.com/ (Accessed: March 10, 2023).)

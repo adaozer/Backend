@@ -37,6 +37,7 @@ async function loadJourneys () {
 };
 
 async function showJourney (journey) {
+  try {
 const selection = await fetch(`http://127.0.0.1:8080/journeys/${journey}`);
 const selectionText = await selection.text();
 const selectionJSON = JSON.parse(selectionText);
@@ -47,9 +48,11 @@ const tableData = `<tr><td data-label="Start">${selectionJSON.Start}</td>
 <td data-label="Expected Passengers">${selectionJSON.ExpectedPassengers}</td>  
 <td data-label="Transcontinental">${selectionJSON.Transcontinental}</td> 
 </tr>`;
-
 document.getElementById('tbody1').innerHTML = tableData;
 document.getElementById('journey-name').innerHTML = journey;
+} catch (err) {
+  alert(`The website disconnected, ${err}`);
+};
 }
 
 async function loadPlanes () {
@@ -74,12 +77,16 @@ document.getElementById('tbody2').innerHTML = tableData;
 
  async function planeData (plane) {
   const box = document.querySelector('.box');
+  try {
   const planeFetch = await fetch(`http://127.0.0.1:8080/planes/${plane}`);
   const planeFetchText = await planeFetch.text();
   if (box.innerHTML === `<p class="para">${planeFetchText}</p>`) {
     box.innerHTML = '';
   } else {
   box.innerHTML = `<p class="para">${planeFetchText}</p>`;
+  }
+} catch (err) {
+alert(`The website has disconnected, ${err}`);
   };
 };
 
@@ -87,6 +94,7 @@ async function addJourney () {
   const form = document.getElementById('form-journey');
   form.addEventListener('submit', async function (event) {
       event.preventDefault();
+      try {
       const formData = new FormData(form);
       const data = Object.fromEntries(formData);
 
@@ -98,7 +106,9 @@ async function addJourney () {
             },
           body: JSON.stringify(data)
       });
-
+    } catch (err) {
+      alert(`The website has disconnected, ${err}`);
+      };
       loadJourneys();
       form.reset();
   });
