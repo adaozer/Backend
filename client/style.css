@@ -265,7 +265,7 @@
   }
   
   #table2 th {
-    font-size: .85em;
+    font-size: .75em;
     letter-spacing: .1em;
     text-transform: uppercase;
   }
@@ -327,7 +327,7 @@
   }
   
   #table1 caption {
-      font-size: 1.5em;
+      font-size: 1.2em;
       margin: .5em 0 .75em;
     }
     
@@ -344,7 +344,7 @@
     }
     
     #table1 th {
-      font-size: .85em;
+      font-size: .75em;
       letter-spacing: .1em;
       text-transform: uppercase;
     }
@@ -406,3 +406,33 @@
     }
   }
   
+@media screen and (max-width: 1500px) {
+  #table1 th {
+    font-size: 0.65em;
+  }
+
+  #table2 th {
+    font-size: 0.65em;
+  }
+
+  .btn {
+    font-size: 0.65em !important;
+  }
+
+  .img {
+    width: 75px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+
+  #table1 th {
+    font-size: 0.55em;
+  }
+
+  #table2 th {
+    font-size: 0.55em;
+  }
+
+  
+}

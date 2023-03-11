@@ -2,7 +2,7 @@
 
 Introduction:
 
-This is a website made for helping airline companies buy planes for new routes they're planning to open. Users can specify the route they're planning on opening and get suggestions on which plane to buy. 
+This is a website made for a business that sells airplanes to airlines. Airlines can add the information of new routes they want to open and the website will recommend them which plane(s) to buy. 
 
 ----------------------------------------------------------------------------------
 
