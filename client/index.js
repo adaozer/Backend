@@ -31,6 +31,7 @@ async function loadJourneys () {
   let dropdownData = '';
   journeysJSON.map((values) => {
     dropdownData += `<a class="dropdown-item" href="#" onclick="showJourney('${values}')">${values}</a>`;
+    return dropdownData;
   });
 
   document.getElementById('selam').innerHTML = dropdownData;
@@ -71,6 +72,7 @@ planesJSON.map((values) => {
   <td data-label="Image"><img src="./images/${values.Image}" class="img"</img></td>
   <td data-label="Show Info"><button class="btn btn-primary" onclick="planeData('${values.name.replace(/\s+/g, '')}')">Show Info</button></td>
   </tr>`;
+  return tableData;
 });
 document.getElementById('tbody2').innerHTML = tableData;
 }

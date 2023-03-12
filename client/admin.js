@@ -31,6 +31,7 @@ async function planeList () {
     let tableData = '';
     dataJSON.map((values) => {
         tableData += `<p class="para">${values.name}</p>`;
+        return tableData;
     });
 
     document.querySelector('.box').innerHTML = tableData;
