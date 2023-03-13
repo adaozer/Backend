@@ -73,8 +73,7 @@ Frameworks Used:
 
 API Documentation:
 
-The API Documentation can be accessed by running the server via the previous instructions and visiting http://127.0.0.1:8080/documentation.
-Otherwise, visiting https://documenter.getpostman.com/view/26143403/2s93JtR4HV#0ae5259c-42c1-4c1f-a27c-84541943e479 or opening the apidoc.pdf file included within this folder will also suffice.
+The API Documentation can be accessed by running the server via the previous instructions and visiting https://documenter.getpostman.com/view/26143403/2s93JtR4HV#0ae5259c-42c1-4c1f-a27c-84541943e479 or opening the apidoc.pdf file included within this folder will also suffice.
 
 ----------------------------------------------------------------------------------
 
