@@ -82,10 +82,12 @@ document.getElementById('tbody2').innerHTML = tableData;
   try {
   const planeFetch = await fetch(`http://127.0.0.1:8080/planes/${plane}`);
   const planeFetchText = await planeFetch.text();
-  if (box.innerHTML === `<p class="para">${planeFetchText}</p>`) {
+  if (box.innerHTML === `<p class="para">${planeFetchText}</p>
+  <p class="para"> If you would like to purchase the ${plane} to use on your route, please email us at planemerchant@gmail.com or call us at +44 532 438 07 90</p>`) {
     box.innerHTML = '';
   } else {
-  box.innerHTML = `<p class="para">${planeFetchText}</p>`;
+  box.innerHTML = `<p class="para">${planeFetchText}</p>
+  <p class="para"> If you would like to purchase the ${plane} to use on your route, please email us at planemerchant@gmail.com or call us at +44 532 438 07 90</p>`;
   }
 } catch (err) {
 alert(`The website has disconnected, ${err}`);
