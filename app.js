@@ -39,7 +39,7 @@ app.get('/planes', function (req, resp) {
  app.post('/journeys/new', function (req, resp) {
     const start = req.body.start;
     const destination = req.body.destination;
-    const distance = req.body.distance;
+    const distance = req.body.distance + 'km';
     const haul = req.body.haul;
     const passengers = req.body.passengers;
     const transcontinental = req.body.transcontinental;

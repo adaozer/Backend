@@ -51,9 +51,9 @@ Other:
 
 - README.md
 
-- node_modules folder
-
 - apidoc.pdf
+
+- demonstration.mp4
 
 ----------------------------------------------------------------------------------
 
