@@ -60,7 +60,7 @@ app.get('/planes', function (req, resp) {
 
 app.post('/planes/new', function (req, resp) {
     const name1 = req.body.name;
-    const img = req.body.image;
+    const img = req.body.img;
     const range = req.body.range + ' km';
     const speed = req.body.speed + ' km/h';
     const passenger = req.body.passenger;

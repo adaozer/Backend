@@ -70,7 +70,7 @@ planesJSON.map((values) => {
   <td data-label="Passenger Capacity">${values.PassengerCapacity}</td>
   <td data-label="Price">${values.Price}</td>  
   <td data-label="Image"><img src="./images/${values.Image}" class="img"</img></td>
-  <td data-label="Show Info"><button class="btn btn-primary" onclick="planeData('${values.name.replace(/\s+/g, '')}')">Show Info</button></td>
+  <td data-label="Show Info"><button class="btn btn-primary" onclick="planeData('${values.name.replace(/\s+/g, '')}')">Show Info/Buy</button></td>
   </tr>`;
   return tableData;
 });
